@@ -48,6 +48,7 @@ func Agent(
 				// Log the error and sleep for a duration before continuing.
 				logError(ctx, err, "failed to create client stream")
 				time.Sleep(duration)
+
 				continue
 			}
 
