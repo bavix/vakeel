@@ -291,12 +291,6 @@ func (t *ServiceGenerator) writeToFile(filePath string, content string) (string,
 		return "", err
 	}
 
-	// Check if the file already exists.
-	if _, err := os.Stat(filePath); !os.IsNotExist(err) {
-		// If the file exists, return the file path.
-		return filePath, nil
-	}
-
 	// Open the file for writing.
 	f, err := os.Create(filePath)
 	if err != nil {
