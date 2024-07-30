@@ -4,6 +4,7 @@ import (
 	"bytes"
 	_ "embed"
 	"errors"
+	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -162,7 +163,7 @@ func (t *ServiceGenerator) Register() error {
 		return t.registerOpenWrt()
 	}
 
-	return errStubNotFound
+	return errUnsupportedOS
 }
 
 // registerSystemd enables and starts the Vakeel service using systemctl.
@@ -177,13 +178,30 @@ func (t *ServiceGenerator) Register() error {
 func (t *ServiceGenerator) registerSystemd() error {
 	// Enable the Vakeel service using systemctl.
 	// If there is an error enabling the service, return the error.
-	if err := exec.Command("systemctl", "enable", "vakeel.service").Run(); err != nil {
-		return err
+	cmd := exec.Command("systemctl", "enable", "vakeel.service")
+	stderr := new(bytes.Buffer)
+	cmd.Stderr = stderr
+
+	// Run the command to enable the service.
+	if err := cmd.Run(); err != nil {
+		// If there is an error, format the error message with the stderr and return the error.
+		return fmt.Errorf("failed to enable vakeel.service: %w: %s", err, stderr.String())
 	}
 
 	// Start the Vakeel service using systemctl.
 	// If there is an error starting the service, return the error.
-	return exec.Command("systemctl", "start", "vakeel.service").Run()
+	cmd = exec.Command("systemctl", "start", "vakeel.service")
+	stderr = new(bytes.Buffer)
+	cmd.Stderr = stderr
+
+	// Run the command to start the service.
+	if err := cmd.Run(); err != nil {
+		// If there is an error, format the error message with the stderr and return the error.
+		return fmt.Errorf("failed to start vakeel.service: %w: %s", err, stderr.String())
+	}
+
+	// If the service is enabled and started successfully, return nil.
+	return nil
 }
 
 // registerOpenWrt registers the Vakeel service using /etc/init.d/vakeel.
@@ -193,19 +211,32 @@ func (t *ServiceGenerator) registerSystemd() error {
 // returned.
 //
 // Returns:
-//
-//	error: An error if there is an error enabling or starting the service.
-//	Nil if the service is enabled and started successfully.
+// An error if there was an error enabling or starting the service, otherwise nil.
 func (t *ServiceGenerator) registerOpenWrt() error {
-	// Enable the Vakeel service using /etc/init.d/vakeel.
+	// Enable the Vakeel service using the /etc/init.d/vakeel script.
 	// If there is an error enabling the service, return the error.
-	if err := exec.Command(openwrtServicePath, "enable").Run(); err != nil {
-		return err
+	cmd := exec.Command(openwrtServicePath, "enable")
+	stderr := new(bytes.Buffer)
+	cmd.Stderr = stderr
+
+	if err := cmd.Run(); err != nil {
+		// Return an error with the name of the script that failed and the error that occurred.
+		return fmt.Errorf("failed to enable %s: %w: %s", openwrtServicePath, err, stderr.String())
 	}
 
-	// Start the Vakeel service using /etc/init.d/vakeel.
+	// Start the Vakeel service using the /etc/init.d/vakeel script.
 	// If there is an error starting the service, return the error.
-	return exec.Command(openwrtServicePath, "start").Run()
+	cmd = exec.Command(openwrtServicePath, "start")
+	stderr = new(bytes.Buffer)
+	cmd.Stderr = stderr
+
+	if err := cmd.Run(); err != nil {
+		// Return an error with the name of the script that failed and the error that occurred.
+		return fmt.Errorf("failed to start %s: %w: %s", openwrtServicePath, err, stderr.String())
+	}
+
+	// If the service was enabled and started successfully, return nil.
+	return nil
 }
 
 // generate generates the stub agent service file based on the operating system.
