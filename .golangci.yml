@@ -11,8 +11,6 @@ linters:
     # not relevant
     - varnamelen
     - wrapcheck
-    # - paralleltest
-    # - exhaustruct
 linters-settings:
   lll:
     line-length: 140
@@ -33,6 +31,8 @@ issues:
       linters:
         - gochecknoglobals
         - gochecknoinits
+        - exhaustruct
+        - mnd
     - path: (.+)_test.go
       linters:
         - dupl
