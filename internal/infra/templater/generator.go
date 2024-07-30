@@ -28,7 +28,7 @@ var errStubNotFound = errors.New("stub template not found")
 // on OpenWRT systems.
 //
 // The init script is responsible for starting and stopping the vakeel agent.
-const openwrtServicePath = "/tmp/etc/init.d/vakeel"
+const openwrtServicePath = "/etc/init.d/vakeel"
 
 // systemdServicePath is the path to the systemd service file for the vakeel agent
 // on systems that use systemd as the service manager.
@@ -36,7 +36,7 @@ const openwrtServicePath = "/tmp/etc/init.d/vakeel"
 // The systemd service file defines the configuration for the vakeel agent as a
 // systemd service. It specifies the command to start the agent, the behavior
 // when the agent crashes or is terminated, and other options.
-const systemdServicePath = "/tmp/etc/systemd/system/vakeel.service"
+const systemdServicePath = "/etc/systemd/system/vakeel.service"
 
 //go:embed openwrt.stub
 var openwrtTemplate string
