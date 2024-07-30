@@ -7,7 +7,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-//nolint:exhaustruct
 var rootCmd = &cobra.Command{
 	Use:   "vakeel",
 	Short: "Agent for vakeel-way",
