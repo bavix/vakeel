@@ -1,6 +1,6 @@
 module github.com/bavix/vakeel
 
-go 1.22.5
+go 1.23
 
 require (
 	github.com/bavix/apis v1.0.0
