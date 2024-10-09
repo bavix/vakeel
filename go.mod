@@ -3,7 +3,7 @@ module github.com/bavix/vakeel
 go 1.23
 
 require (
-	github.com/bavix/apis v1.0.0
+	github.com/bavix/apis v1.0.1
 	github.com/bavix/vakeel-way v1.0.5
 	github.com/google/uuid v1.6.0
 	github.com/rs/zerolog v1.33.0
@@ -20,5 +20,5 @@ require (
 	golang.org/x/sys v0.24.0 // indirect
 	golang.org/x/text v0.17.0 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20240814211410-ddb44dafa142 // indirect
-	google.golang.org/protobuf v1.34.2 // indirect
+	google.golang.org/protobuf v1.35.1 // indirect
 )
