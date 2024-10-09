@@ -1,5 +1,5 @@
-github.com/bavix/apis v1.0.0 h1:VqRiXAjVZ8q2Vrwp1/fPT3jXWHwfReFzawxErSymbhI=
-github.com/bavix/apis v1.0.0/go.mod h1:lL40JQEilatN4osf1UkweZcKSDWaL5JC8IZilArLOUA=
+github.com/bavix/apis v1.0.1 h1:8cmtTv+VxoIkjm72pRqctfetcVeZHMLAspWjNh3a97Q=
+github.com/bavix/apis v1.0.1/go.mod h1:37lYS02prVYUOu86gEfqhS75KrcR3hKB2LlykcMvjms=
 github.com/bavix/vakeel-way v1.0.5 h1:6/uvxV5bN071C9p6j2TaKXMOC5MaAC3YPDPqRCxFXeA=
 github.com/bavix/vakeel-way v1.0.5/go.mod h1:5nk9GnDEvsBPkZ/IiKcvEHnosX7fyokmYSVIM3sqlvY=
 github.com/coreos/go-systemd/v22 v22.5.0/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
@@ -45,8 +45,8 @@ google.golang.org/genproto/googleapis/rpc v0.0.0-20240814211410-ddb44dafa142 h1:
 google.golang.org/genproto/googleapis/rpc v0.0.0-20240814211410-ddb44dafa142/go.mod h1:UqMtugtsSgubUsoxbuAoiCXvqvErP7Gf0so0mK9tHxU=
 google.golang.org/grpc v1.67.1 h1:zWnc1Vrcno+lHZCOofnIMvycFcc0QRGIzm9dhnDX68E=
 google.golang.org/grpc v1.67.1/go.mod h1:1gLDyUQU7CTLJI90u3nXZ9ekeghjeM7pTDZlqFNg2AA=
-google.golang.org/protobuf v1.34.2 h1:6xV6lTsCfpGD21XK49h7MhtcApnLqkfYgPcdHftf6hg=
-google.golang.org/protobuf v1.34.2/go.mod h1:qYOHts0dSfpeUzUFpOMr/WGzszTmLH+DiWniOlNbLDw=
+google.golang.org/protobuf v1.35.1 h1:m3LfL6/Ca+fqnjnlqQXNpFPABW1UD7mjh8KO2mKFytA=
+google.golang.org/protobuf v1.35.1/go.mod h1:9fA7Ob0pmnwhb644+1+CVWFRbNajQ6iRojtC/QF5bRE=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHuvctI91KS9hhNmmWOoWu0XTYJS7CA=
 gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
