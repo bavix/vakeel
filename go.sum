@@ -1,7 +1,7 @@
 github.com/bavix/apis v1.0.1 h1:8cmtTv+VxoIkjm72pRqctfetcVeZHMLAspWjNh3a97Q=
 github.com/bavix/apis v1.0.1/go.mod h1:37lYS02prVYUOu86gEfqhS75KrcR3hKB2LlykcMvjms=
-github.com/bavix/vakeel-way v1.0.5 h1:6/uvxV5bN071C9p6j2TaKXMOC5MaAC3YPDPqRCxFXeA=
-github.com/bavix/vakeel-way v1.0.5/go.mod h1:5nk9GnDEvsBPkZ/IiKcvEHnosX7fyokmYSVIM3sqlvY=
+github.com/bavix/vakeel-way v1.0.6 h1:Phx1aaxhxSYgHDarcFA+1v5Ux30q6Kh/XMFlb5bIVQQ=
+github.com/bavix/vakeel-way v1.0.6/go.mod h1:29OTSRZA/Gup4LY4IppElUXEk5iXh36RzwQDzvPps3I=
 github.com/coreos/go-systemd/v22 v22.5.0/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
 github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
