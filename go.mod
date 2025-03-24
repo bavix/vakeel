@@ -6,7 +6,7 @@ require (
 	github.com/bavix/apis v1.0.1
 	github.com/bavix/vakeel-way v1.0.8
 	github.com/google/uuid v1.6.0
-	github.com/rs/zerolog v1.33.0
+	github.com/rs/zerolog v1.34.0
 	github.com/spf13/cobra v1.9.1
 	google.golang.org/grpc v1.71.0
 )
