@@ -7,7 +7,7 @@ require (
 	github.com/bavix/vakeel-way v1.0.8
 	github.com/google/uuid v1.6.0
 	github.com/rs/zerolog v1.34.0
-	github.com/spf13/cobra v1.10.1
+	github.com/spf13/cobra v1.10.2
 	google.golang.org/grpc v1.75.1
 )
 
